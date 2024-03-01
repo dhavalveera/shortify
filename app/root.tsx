@@ -1,27 +1,25 @@
-import { cssBundleHref } from "@remix-run/css-bundle";
-import type { LinksFunction } from "@remix-run/node";
-import {
-  Links,
-  LiveReload,
-  Meta,
-  Outlet,
-  Scripts,
-  ScrollRestoration,
-} from "@remix-run/react";
+import { cssBundleHref } from '@remix-run/css-bundle'
+import type { LinksFunction } from '@remix-run/node'
+import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } from '@remix-run/react'
 
 // Flowbite React
-import { ThemeModeScript } from "flowbite-react";
+import { ThemeModeScript } from 'flowbite-react'
+
+// Layout
+import Layout from './layout'
 
 // CSS
 import stylesheet from '~/tailwind.css'
 import outputCss from '~/output.css'
 
+// UI
+import { CenterLayout } from './ui'
 
 export const links: LinksFunction = () => [
-  ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
+  ...(cssBundleHref ? [{ rel: 'stylesheet', href: cssBundleHref }] : []),
   ...(process.env.NODE_ENV === 'development' ? [{ rel: 'stylesheet', href: stylesheet, as: 'style' }] : []),
   ...(process.env.NODE_ENV === 'production' ? [{ rel: 'stylesheet', href: outputCss }] : []),
-];
+]
 
 export const APP_NAME: string = 'URL Shortener - Short URLs & Custom Free Link Shortener | Shortify'
 
@@ -84,16 +82,20 @@ export default function App() {
         {/* Flowbite React */}
         <ThemeModeScript />
 
-
         <Meta />
         <Links />
       </head>
-      <body>
-        <Outlet />
-        <ScrollRestoration />
-        <Scripts />
-        <LiveReload />
+      <body className={CenterLayout}>
+        <Layout>
+          <Outlet />
+
+          <ScrollRestoration />
+
+          <Scripts />
+
+          <LiveReload />
+        </Layout>
       </body>
     </html>
-  );
+  )
 }
