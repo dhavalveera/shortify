@@ -1,0 +1,11 @@
+{
+  "name": "Shortify - URL Shortener",
+  "short_name": "Shortify",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/",
+  "description": "Shortify's Connections Platform is more than a free URL shortener, with link management web app, and a Link-in-bio solution.",
+  "lang": "en-US",
+  "dir": "ltr"
+}

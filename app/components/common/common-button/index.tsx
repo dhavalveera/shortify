@@ -20,7 +20,7 @@ const CustomButton: FC<CustomButtonProps> = props => {
       onClick={onClick}
       disabled={disabledBtn}
       className={tailwindClassMerger(
-        'box-border inline-block rounded-md bg-[#2a5bd7] px-7 py-3 text-center align-middle text-base leading-[1.11] text-white outline-none disabled:border-none disabled:bg-[#cccccc] disabled:text-[#666666]',
+        'box-border inline-block rounded-md bg-[#2a5bd7] px-[30px] py-5 text-center align-middle text-base leading-[1.11] text-white outline-none disabled:border-none disabled:bg-[#cccccc] disabled:text-[#666666]',
         extraClass,
       )}
     >

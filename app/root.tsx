@@ -5,15 +5,12 @@ import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } from '@re
 // Flowbite React
 import { ThemeModeScript } from 'flowbite-react'
 
-// Layout
-import Layout from './layout'
-
 // CSS
 import stylesheet from '~/tailwind.css'
 import outputCss from '~/output.css'
 
 // UI
-import { CenterLayout } from './ui'
+import { MainParentLayout } from './ui'
 
 export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: 'stylesheet', href: cssBundleHref }] : []),
@@ -54,8 +51,8 @@ export default function App() {
         <meta name="apple-mobile-web-app-title" content={APP_NAME} />
         <meta name="format-detection" content="telephone=no" />
         <meta name="mobile-web-app-capable" content="yes" />
-        {/* <meta name="theme-color" content="#54ca95" />
-        <link rel="manifest" href="/manifest.json" /> */}
+        {/* <meta name="theme-color" content="#54ca95" /> */}
+        <link rel="manifest" href="/manifest.json" />
         {/* <link rel="apple-touch-icon" href="/D_V_Cropped.png" /> */}
 
         {/* Icons */}
@@ -85,16 +82,14 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className={CenterLayout}>
-        <Layout>
-          <Outlet />
+      <body className={MainParentLayout}>
+        <Outlet />
 
-          <ScrollRestoration />
+        <ScrollRestoration />
 
-          <Scripts />
+        <Scripts />
 
-          <LiveReload />
-        </Layout>
+        <LiveReload />
       </body>
     </html>
   )

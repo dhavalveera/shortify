@@ -1,7 +1,7 @@
 import type { FC, PropsWithChildren } from 'react'
 
 // Navbar
-import Navbar from './navbar'
+import CustomNavbar from './navbar'
 
 // Footer
 import Footer from './footer'
@@ -9,7 +9,7 @@ import Footer from './footer'
 const Layout: FC<PropsWithChildren> = props => {
   return (
     <div>
-      <Navbar />
+      <CustomNavbar />
 
       <div>{props.children}</div>
 
