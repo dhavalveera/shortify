@@ -1,5 +1,8 @@
 import type { FC } from 'react'
 
+// Helpers
+import { tailwindClassMerger } from '~/helpers'
+
 type TextFieldProps = {
   idName: string
   label: string
@@ -7,10 +10,11 @@ type TextFieldProps = {
   required: boolean
   placeholderText: string
   disabled: boolean
+  extraClass?: string
 }
 
 const TextField: FC<TextFieldProps> = props => {
-  const { disabled = false, idName, inputType, label, placeholderText, required = true } = props
+  const { disabled = false, extraClass = '', idName, inputType, label, placeholderText, required = true } = props
 
   return (
     <div>
@@ -22,7 +26,7 @@ const TextField: FC<TextFieldProps> = props => {
           name={idName}
           type={inputType}
           id={idName}
-          className="block w-full rounded-md border-0 p-2 text-gray-900 shadow-sm ring-1 sm:text-sm sm:leading-6"
+          className={tailwindClassMerger('block w-full rounded-md border-0 p-2 text-gray-900 shadow-sm ring-1 sm:text-sm sm:leading-6', extraClass)}
           required={required}
           placeholder={placeholderText}
           disabled={disabled}

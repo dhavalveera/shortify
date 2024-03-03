@@ -1,4 +1,8 @@
-import type { MetaFunction } from '@remix-run/node'
+import {
+  // redirect,
+  type ActionFunctionArgs,
+  type MetaFunction,
+} from '@remix-run/node'
 
 // SEO Data
 import { SEOTagsData } from '~/data'
@@ -42,6 +46,21 @@ export const meta: MetaFunction = () => {
     { tagName: 'link', rel: 'preload', as: 'image', href: SEOTagsData['home'].preloadDVImg, type: 'image/png' },
     { tagName: 'link', rel: 'preload', as: 'image', href: SEOTagsData['home'].preloadLogo, type: 'image/png' },
   ]
+}
+
+// Action to handle form submission
+export const action = async ({ request }: ActionFunctionArgs) => {
+  // Get the form data from the Request body of HTTP GET Method
+  const body = await request.formData()
+
+  // use the `get` to get the form field value
+  const longUrl = body.get('long-url')
+  const customHalfBack = body.get('back-half')
+
+  // return redirect(`/auth/login?longUrl=${longUrl}&customHalfBack=${customHalfBack}`)
+  console.log({ longUrl, customHalfBack })
+
+  return null
 }
 
 export default function Index() {

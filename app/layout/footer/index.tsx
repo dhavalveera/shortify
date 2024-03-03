@@ -10,7 +10,7 @@ const Footer: FC = () => {
         {/* StartGrid */}
         <div className="mx-auto grid max-w-sm grid-cols-2 gap-3 gap-y-8 py-10 sm:max-w-3xl sm:grid-cols-4 md:gap-8 lg:max-w-full lg:grid-cols-6">
           <div className="col-span-full mb-10 lg:col-span-2 lg:mb-0">
-            <p className="mb-3 text-sm text-gray-500">&copy; Shortify {new Date().getFullYear()}, All rights reserved.</p>
+            <p className="mb-3 text-sm text-gray-500 dark:text-white">&copy; Shortify {new Date().getFullYear()}, All rights reserved.</p>
             <div className="mt-4 flex space-x-4 lg:mt-0 ">
               <Link
                 to="https://twitter.com"

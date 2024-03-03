@@ -17,7 +17,7 @@ const CustomNavbar: FC = () => {
           {/* <img src="/Shortify.svg" srcSet="/Shortify.svg" alt="Shortify" className="h-28 w-28" /> */}
           <span className="self-center whitespace-nowrap text-xl font-semibold text-primaryDarkBlue dark:text-white">Shortify</span>
         </Navbar.Brand>
-        <div className="flex items-center gap-1 md:order-2">
+        <div className="flex items-center gap-2 md:order-2">
           <div>
             <Tooltip animation="duration-1000" content="Toggle Dark Mode">
               <DarkThemeToggle />

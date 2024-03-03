@@ -8,13 +8,13 @@ import Footer from './footer'
 
 const Layout: FC<PropsWithChildren> = props => {
   return (
-    <div>
+    <>
       <CustomNavbar />
 
       <div>{props.children}</div>
 
       <Footer />
-    </div>
+    </>
   )
 }
 

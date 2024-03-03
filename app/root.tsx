@@ -81,7 +81,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className={MainParentLayout}>
+      <body className={`${MainParentLayout} antialiased`}>
         <Outlet />
 
         <ScrollRestoration />
