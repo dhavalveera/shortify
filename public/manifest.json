@@ -1,10 +1,13 @@
 {
   "name": "Shortify - URL Shortener",
   "short_name": "Shortify",
+  "theme_color": "#0A27AB",
+  "background_color": "#0A27AB",
   "display": "fullscreen",
   "orientation": "portrait",
   "scope": "/",
   "start_url": "/",
+  "categories": ["url shortener", "short url", "url short", "digital"],
   "description": "Shortify's Connections Platform is more than a free URL shortener, with link management web app, and a Link-in-bio solution.",
   "lang": "en-US",
   "dir": "ltr"

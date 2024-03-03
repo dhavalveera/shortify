@@ -14,7 +14,8 @@ const CustomNavbar: FC = () => {
     <header>
       <Navbar fluid rounded>
         <Navbar.Brand as={Link} to="/">
-          <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Shortify</span>
+          {/* <img src="/Shortify.svg" srcSet="/Shortify.svg" alt="Shortify" className="h-28 w-28" /> */}
+          <span className="text-primaryDarkBlue self-center whitespace-nowrap text-xl font-semibold dark:text-white">Shortify</span>
         </Navbar.Brand>
         <div className="flex md:order-2">
           <div className="hidden md:block">

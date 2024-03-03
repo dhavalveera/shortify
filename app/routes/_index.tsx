@@ -1,5 +1,8 @@
 import type { MetaFunction } from '@remix-run/node'
 
+// SEO Data
+import { SEOTagsData } from '~/data'
+
 // Layout
 import Layout from '~/layout'
 
@@ -9,8 +12,35 @@ import HomeSignUpNProductTabsSection from '~/components/page-components/home-pag
 
 export const meta: MetaFunction = () => {
   return [
-    { title: 'URL Shortener - Short URLs & Custom Free Link Shortener | Shortify' },
-    { name: 'description', content: "Shortify's Connections Platform is more than a free URL shortener, with link management web app, and a Link-in-bio solution." },
+    { title: SEOTagsData['home'].title },
+    { name: 'description', content: SEOTagsData['home'].description },
+    { name: 'keywords', content: SEOTagsData['home'].keywords },
+    { tagName: 'link', rel: 'alternate', href: SEOTagsData['home'].domainUrl, hrefLang: 'en-us' },
+    { tagName: 'link', rel: 'alternate', href: SEOTagsData['home'].domainUrl, hrefLang: 'x-default' },
+
+    // Meta
+    { tagName: 'meta', property: 'og:url', content: SEOTagsData['home'].domainUrl },
+    { tagName: 'meta', property: 'og:type', content: 'website' },
+    { tagName: 'meta', property: 'og:title', content: SEOTagsData['home'].title },
+    { tagName: 'meta', property: 'og:site_name', content: SEOTagsData['home'].title },
+    { tagName: 'meta', property: 'og:description', content: SEOTagsData['home'].description },
+    { tagName: 'meta', property: 'og:image', content: SEOTagsData['home'].ogMetaImgUrl },
+    { tagName: 'meta', property: 'og:image:url', content: SEOTagsData['home'].ogMetaImgUrl },
+    { tagName: 'meta', property: 'og:locale', content: 'en_US' },
+    { tagName: 'meta', property: 'og:image:alt', content: SEOTagsData['home'].authorName },
+
+    // Twitter
+    { tagName: 'meta', name: 'twitter:card', content: 'summary_large_image' },
+    { tagName: 'meta', name: 'twitter:site', content: '@dhavalveera' },
+    { tagName: 'meta', name: 'twitter:creator', content: '@dhavalveera' },
+    { tagName: 'meta', name: 'twitter:domain', content: SEOTagsData['home'].domainUrl },
+    { tagName: 'meta', name: 'twitter:url', content: SEOTagsData['home'].domainUrl },
+    { tagName: 'meta', name: 'twitter:title', content: SEOTagsData['home'].title },
+    { tagName: 'meta', name: 'twitter:description', content: SEOTagsData['home'].description },
+    { tagName: 'meta', name: 'twitter:image', content: SEOTagsData['home'].twitterMetaImgUrl },
+    { tagName: 'link', rel: 'canonical', href: SEOTagsData['home'].domainUrl },
+    { tagName: 'link', rel: 'preload', as: 'image', href: SEOTagsData['home'].preloadDVImg, type: 'image/png' },
+    { tagName: 'link', rel: 'preload', as: 'image', href: SEOTagsData['home'].preloadLogo, type: 'image/png' },
   ]
 }
 

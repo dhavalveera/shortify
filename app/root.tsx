@@ -51,7 +51,7 @@ export default function App() {
         <meta name="apple-mobile-web-app-title" content={APP_NAME} />
         <meta name="format-detection" content="telephone=no" />
         <meta name="mobile-web-app-capable" content="yes" />
-        {/* <meta name="theme-color" content="#54ca95" /> */}
+        <meta name="theme-color" content="#0A27AB" />
         <link rel="manifest" href="/manifest.json" />
         {/* <link rel="apple-touch-icon" href="/D_V_Cropped.png" /> */}
 
@@ -70,11 +70,10 @@ export default function App() {
         <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
-        <meta name="msapplication-TileColor" content="#54ca95" />
+        <meta name="msapplication-TileColor" content="#0A27AB" />
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
         <meta name="msapplication-TileImage" content="/ms-icon-150x150.png" />
         <meta name="msapplication-TileImage" content="/ms-icon-310x310.png" />
-        <meta name="theme-color" content="#54ca95" /> */}
 
         {/* Flowbite React */}
         <ThemeModeScript />
