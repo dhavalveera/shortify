@@ -1,4 +1,4 @@
-export const MainParentLayout: string = 'mx-auto max-w-7xl px-4 md:px-0'
+export const MainParentLayout: string = 'mx-auto max-w-7xl px-4 md:px-0 dark:bg-black'
 export const MdTwoColXsOneCol: string = 'grid auto-cols-[1fr] grid-cols-[1fr] grid-rows-[auto] justify-center gap-4 gap-y-5 md:grid-cols-[1fr_1fr]'
 export const MdThreeColXsOneCol: string = 'grid auto-cols-[1fr] grid-cols-[1fr] grid-rows-[auto] justify-center gap-4 gap-y-5 md:grid-cols-[1fr_1fr_1fr]'
 export const MdFourColXsOneCol: string = 'grid auto-cols-[1fr] grid-cols-[1fr] grid-rows-[auto] justify-center gap-4 gap-y-5 md:grid-cols-[1fr_1fr_1fr_1fr]'
