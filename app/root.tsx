@@ -15,7 +15,7 @@ import { MainParentLayout } from './ui'
 export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: 'stylesheet', href: cssBundleHref }] : []),
   ...(process.env.NODE_ENV === 'development' ? [{ rel: 'stylesheet', href: stylesheet, as: 'style' }] : []),
-  ...(process.env.NODE_ENV === 'production' ? [{ rel: 'stylesheet', href: outputCss }] : []),
+  ...(process.env.NODE_ENV === 'production' ? [{ rel: 'preload stylesheet', href: outputCss, as: 'style', type: 'text/css', crossorigin: 'anonymous' }] : []),
 ]
 
 export const APP_NAME: string = 'URL Shortener - Short URLs & Custom Free Link Shortener | Shortify'
