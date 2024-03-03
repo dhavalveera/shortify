@@ -23,8 +23,8 @@ const CustomNavbar: FC = () => {
           <Navbar.Toggle />
         </div>
         <Navbar.Collapse>
-          <Navbar.Link>
-            <Dropdown arrowIcon inline label="Products">
+          <Navbar.Link as="div">
+            <Dropdown arrowIcon inline label="Products" as="button">
               <Dropdown.Item as={Link} to="/products/url-shortner">
                 URL Shortner
               </Dropdown.Item>
