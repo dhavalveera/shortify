@@ -1,8 +1,4 @@
-import {
-  // redirect,
-  type ActionFunctionArgs,
-  type MetaFunction,
-} from '@remix-run/node'
+import { redirect, type ActionFunctionArgs, type MetaFunction } from '@remix-run/node'
 
 // SEO Data
 import { SEOTagsData } from '~/data'
@@ -40,8 +36,8 @@ export const meta: MetaFunction = () => {
     { tagName: 'meta', name: 'twitter:description', content: SEOTagsData['home'].description },
     { tagName: 'meta', name: 'twitter:image', content: SEOTagsData['home'].twitterMetaImgUrl },
     { tagName: 'link', rel: 'canonical', href: SEOTagsData['home'].domainUrl },
-    { tagName: 'link', rel: 'preload', as: 'image', href: SEOTagsData['home'].preloadDVImg, type: 'image/png' },
-    { tagName: 'link', rel: 'preload', as: 'image', href: SEOTagsData['home'].preloadLogo, type: 'image/png' },
+    // { tagName: 'link', rel: 'preload', as: 'image', href: SEOTagsData['home'].preloadDVImg, type: 'image/png' },
+    // { tagName: 'link', rel: 'preload', as: 'image', href: SEOTagsData['home'].preloadLogo, type: 'image/png' },
   ]
 }
 
@@ -57,7 +53,7 @@ export const action = async ({ request }: ActionFunctionArgs) => {
   // return redirect(`/auth/login?longUrl=${longUrl}&customHalfBack=${customHalfBack}`)
   console.log({ longUrl, customHalfBack })
 
-  return null
+  return redirect(`/auth/login?longUrl=${longUrl}&optionText=${customHalfBack}`)
 }
 
 export default function Index() {

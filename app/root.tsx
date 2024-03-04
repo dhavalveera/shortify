@@ -34,7 +34,7 @@ export default function App() {
         {/* Meta Tags */}
         <meta name="application-name" content={APP_NAME} />
         <meta name="author" content="Dhaval Vira" />
-        <meta name="robots" content="index, follow" />
+        <meta name="robots" content="index, follow, indexifembedded" />
         <meta name="rating" content="general" />
         {/* <link rel="canonical" href={process.env.SHARE_URL} /> */}
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
