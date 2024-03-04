@@ -7,9 +7,6 @@ import {
 // SEO Data
 import { SEOTagsData } from '~/data'
 
-// Layout
-import Layout from '~/layout'
-
 // Home Page Components
 import HomeHeroSection from '~/components/page-components/home-page/hero-section'
 import HomeSignUpNProductTabsSection from '~/components/page-components/home-page/signup-n-product-tabs'
@@ -65,12 +62,10 @@ export const action = async ({ request }: ActionFunctionArgs) => {
 
 export default function Index() {
   return (
-    <Layout>
-      <main>
-        <HomeHeroSection />
+    <main>
+      <HomeHeroSection />
 
-        <HomeSignUpNProductTabsSection />
-      </main>
-    </Layout>
+      <HomeSignUpNProductTabsSection />
+    </main>
   )
 }

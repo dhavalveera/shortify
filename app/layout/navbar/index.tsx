@@ -15,7 +15,7 @@ const CustomNavbar: FC = () => {
       <Navbar fluid rounded theme={{ root: { base: 'dark:border-none dark:bg-transparent' } }}>
         <Navbar.Brand as={Link} to="/">
           {/* <img src="/Shortify.svg" srcSet="/Shortify.svg" alt="Shortify" className="h-28 w-28" /> */}
-          <span className="self-center whitespace-nowrap text-xl font-semibold text-primaryDarkBlue dark:text-white">Shortify</span>
+          <p className="self-center whitespace-nowrap text-xl font-semibold text-primaryDarkBlue dark:text-white">Shortify</p>
         </Navbar.Brand>
         <div className="flex items-center gap-2 md:order-2">
           <div>

@@ -9,6 +9,9 @@ import { ThemeModeScript } from 'flowbite-react'
 import stylesheet from '~/tailwind.css'
 import outputCss from '~/output.css'
 
+// Layout
+import Layout from './layout'
+
 // UI
 import { MainParentLayout } from './ui'
 
@@ -82,13 +85,15 @@ export default function App() {
         <Links />
       </head>
       <body className={`${MainParentLayout} antialiased`}>
-        <Outlet />
+        <Layout>
+          <Outlet />
 
-        <ScrollRestoration />
+          <ScrollRestoration />
 
-        <Scripts />
+          <Scripts />
 
-        <LiveReload />
+          <LiveReload />
+        </Layout>
       </body>
     </html>
   )
